@@ -24,9 +24,12 @@ public class BoidManager : MonoBehaviour
     // Creates boid and adds to list
     private void CreateBoid()
     {
-        var newBoid = Instantiate(boidPrefab, transform);
-        newBoid.transform.position = new Vector3(Random.Range(-30f, 30f), Random.Range(-30f, 30f));
-        boidList.Add(newBoid);
+        for (int i = 0; i < 5; i++)
+        {
+            var newBoid = Instantiate(boidPrefab, transform);
+            newBoid.transform.position = new Vector3(Random.Range(-30f, 30f), Random.Range(-30f, 30f));
+            boidList.Add(newBoid);
+        }
     }
 
     private void MoveToNewPosition(BoidBehaviour boid)
@@ -35,8 +38,9 @@ public class BoidManager : MonoBehaviour
 
         //component1 = Rule1.FindPointTowardsGlobalMassCentre(boidList, boid);
         component1 = Rule1.FindPointTowardsLocalMassCentre(boidList, boid, perciveDistance);
+        component2 = Rule2.MoveAwayFromNearbyObjects(boidList, boid);
 
-        boid.CurrentVelocity = boid.CurrentVelocity + component1;
+        boid.CurrentVelocity = boid.CurrentVelocity + component1 + component2;
         boid.transform.position = boid.transform.position + boid.CurrentVelocity;
     }
 }

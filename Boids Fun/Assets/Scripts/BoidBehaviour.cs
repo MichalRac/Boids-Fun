@@ -18,5 +18,5 @@ public class BoidBehaviour : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, angle), 5);
         }
     } 
-    public const float maxVelocity = 1.5f; 
+    public const float maxVelocity = 0.75f; 
 }
