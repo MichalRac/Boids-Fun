@@ -12,12 +12,12 @@ public static class Rule2
 
         foreach(var boid in boidList)
         {
-            if(percivingBoid != boid)
+            if (percivingBoid == boid)
+                continue;
+
+            if (Mathf.Abs((boid.transform.position - percivingBoid.transform.position).magnitude) < minDistanceToKeepFromObstacles)
             {
-                if(Mathf.Abs((boid.transform.position - percivingBoid.transform.position).magnitude) < minDistanceToKeepFromObstacles)
-                {
-                    result = result - (boid.transform.position - percivingBoid.transform.position);
-                }
+                result = result - (boid.transform.position - percivingBoid.transform.position);
             }
         }
 
