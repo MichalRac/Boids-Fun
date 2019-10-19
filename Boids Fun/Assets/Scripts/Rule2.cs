@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rule2 : MonoBehaviour
+public static class Rule2
 {
-    private const float minDistanceToKeepFromObstacles = 7.5f;
+    private const float minDistanceToKeepFromObstacles = 2.5f;
 
     public static Vector3 MoveAwayFromNearbyObjects(List<BoidBehaviour> boidList, BoidBehaviour percivingBoid)
     {

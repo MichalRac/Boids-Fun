@@ -39,8 +39,9 @@ public class BoidManager : MonoBehaviour
         //component1 = Rule1.FindPointTowardsGlobalMassCentre(boidList, boid);
         component1 = Rule1.FindPointTowardsLocalMassCentre(boidList, boid, perciveDistance);
         component2 = Rule2.MoveAwayFromNearbyObjects(boidList, boid);
+        component3 = Rule3.MatchVelocityOfPercivedBoids(boidList, boid, perciveDistance);
 
-        boid.CurrentVelocity = boid.CurrentVelocity + component1 + component2;
+        boid.CurrentVelocity = boid.CurrentVelocity + component1 + component2 + component3;
         boid.transform.position = boid.transform.position + boid.CurrentVelocity;
     }
 }
