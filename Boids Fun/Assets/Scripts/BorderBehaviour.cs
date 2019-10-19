@@ -30,7 +30,7 @@ public class BorderBehaviour : MonoBehaviour
         Vector3 targetPosition = other.transform.position;
 
         targetPosition = -other.transform.position;
-        /*
+        
         if (other.transform.position.x >= horExtent || other.transform.position.x <= -horExtent)
         {
             targetPosition.x = -other.transform.position.x;
@@ -50,7 +50,7 @@ public class BorderBehaviour : MonoBehaviour
             else if (targetPosition.z < 0)
                 targetPosition.z += BUFFOR_VALUE_AFTER_MOVING;
         }
-        */
+        
 
         other.transform.position = targetPosition;
     }
