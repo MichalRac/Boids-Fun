@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class Rule2
 {
-    private const float minDistanceToKeepFromObstacles = 5f;
-    private const float MOVE_AWAY_FACTOR = 10f;
+    private const float minDistanceToKeepFromObstacles = 2f;
+    private const float MOVE_AWAY_FACTOR = 2f;
 
     public static Vector3 MoveAwayFromNearbyObjects(List<BoidBehaviour> boidList, BoidBehaviour percivingBoid)
     {

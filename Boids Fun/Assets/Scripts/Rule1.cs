@@ -22,7 +22,6 @@ public static class Rule1
         return (massCentre - percivingBoid.transform.position) / DISTANCE_FACTOR;
     }
 
-
     // DETAILED - boids have limited awarness
     public static Vector3 FindPointTowardsLocalMassCentre(List<BoidBehaviour> boidList, BoidBehaviour percivingBoid, float perciveDistance)
     {

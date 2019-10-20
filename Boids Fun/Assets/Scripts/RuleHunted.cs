@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RuleHunted : MonoBehaviour
 {
-    private const float minDistanceToKeepFromObstacles = 10f;
+    private const float minDistanceToKeepFromObstacles = 30f;
     private const float MOVE_AWAY_FACTOR = 10f;
 
     public static Vector3 MoveAwayFromPredators(List<BoidBehaviour> boidList, BoidBehaviour percivingBoid)

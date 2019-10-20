@@ -10,7 +10,7 @@ public enum BoidType
 
 public class BoidBehaviour : MonoBehaviour
 {
-    public const float maxVelocity = 1.5f;
+    public const float maxVelocity = 0.75f;
 
     private BoidType boidType;
     private Vector3 currentVelocity = Vector3.zero;
